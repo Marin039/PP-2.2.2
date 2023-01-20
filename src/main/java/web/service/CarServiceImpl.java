@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import web.dao.CarDao;
 import web.model.Car;
 
+import java.io.IOException;
 import java.util.List;
 @Component
 public class CarServiceImpl implements CarService{
