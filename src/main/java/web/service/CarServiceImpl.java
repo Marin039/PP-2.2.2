@@ -17,6 +17,10 @@ public class CarServiceImpl implements CarService{
     @Override
     public List<Car> getAllCars(String count1) {
         int count = Integer.parseInt(count1);
-        return carDao.getAllCars(count);
+        if (count<=0) {
+            return carDao.getAllCars(0);
+        } else {
+            return carDao.getAllCars(count);
+        }
     }
 }

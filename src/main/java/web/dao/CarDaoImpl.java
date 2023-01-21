@@ -20,11 +20,7 @@ public class CarDaoImpl implements CarDao{
 
     @Override
     public List<Car> getAllCars(int count) {
-        if (count<=0) {
-            return allCars.stream().limit(0).toList();
-        } else {
-            return allCars.stream().limit(count).toList();
-        }
+        return allCars.stream().limit(count).toList();
     }
 
 }
