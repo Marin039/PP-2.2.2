@@ -19,5 +19,4 @@ public class CarServiceImpl implements CarService{
         int count = Integer.parseInt(count1);
         return carDao.getAllCars(count);
     }
-
 }

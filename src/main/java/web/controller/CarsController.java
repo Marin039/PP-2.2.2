@@ -18,11 +18,7 @@ public class CarsController {
     }
     @GetMapping("/cars")
     public String carsPage(Model model, @RequestParam (defaultValue  = "5") String count1)  {
-        try {
-            model.addAttribute("allcars", carService.getAllCars(count1));
-        } catch (Exception e) {
-            model.addAttribute("exception", carService.getAllCars(count1));
-        }
+        model.addAttribute("allcars", carService.getAllCars(count1));
         return "cars";
     }
 }
